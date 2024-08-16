@@ -1,0 +1,20 @@
+{
+    "name": "Jason",
+    "profession": "Software Engineer",
+    "age": 23,
+    "residence": "S.Korea",
+    "address": "S.Korea, Daejon",
+    "languages": ["Uzbek", "Korean", "English"],
+    "skills": ["Html", "Css", "Js", "NodeJs", "Python"],
+    "extra_skills": ["Bootstrap, Materialize", "Styling, Saas", "Django, Flask", "GIT knowledge" ],
+    "work_place": "IT company",
+    "service_desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, sint!",
+    "about_me": "Odit suscipit ea quasi enim neque tempore sit, ullam labore fugiat mollitia officia voluptatibus magni omnis odio harum incidunt, recusandae at nesciunt?",
+    "city": "Djizzakh",
+    "title": ["Flower", "Seedlings", "Gardner", "old", "New"],
+    "flower_desc": ["What is flower?", "What is seedlings?", "Who is gardner?"],
+    "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop"],
+    "flower_price": ["15$", "25$", "20$", "34$", "22$", "12$", "21$"],
+    "famous_words": ["World is beatiful with flowers"],
+    "famous_name": ["Steve Jobs"]
+}
