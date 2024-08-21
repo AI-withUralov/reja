@@ -73,3 +73,22 @@ async function run() {
     console.log(javob);
 }
 run();
+
+
+// Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
+// MASALAN countLetter("e", "engineer") 3ni return qiladi.
+
+
+function Task_A(letter, word){
+    let count = 0
+    for (let i = 0; i < word.length; i++) {
+        if (word[i] === letter) {
+            count++;
+        }
+    }
+    return count;
+    
+}
+
+const javob = Task_A("a", "applaaa");
+console.log("Ushbu harf berilgan so'zda ", javob, " martta qatnashgan")
