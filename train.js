@@ -79,16 +79,17 @@ run();
 // MASALAN countLetter("e", "engineer") 3ni return qiladi.
 
 
-function Task_A(letter, word){
-    let count = 0
-    for (let i = 0; i < word.length; i++) {
-        if (word[i] === letter) {
-            count++;
+function Task_A(letter, word) {
+    let count = 0;
+    for (let i = 0; i < word.length; i++){
+        if(word[i] === letter){
+            count ++ ; 
         }
     }
-    return count;
-    
+    return count ;
 }
+
 
 const javob = Task_A("a", "applaaa");
 console.log("Ushbu harf berilgan so'zda ", javob, " martta qatnashgan")
+
