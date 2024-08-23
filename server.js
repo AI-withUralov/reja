@@ -3,7 +3,8 @@ const mongodb = require("mongodb");
 
 
 let db;
-const connectionString = "mongodb+srv://SherzodBek:Werzod%402001@mycluster.oliai.mongodb.net/Reja?authSource=admin&replicaSet=atlas-1371sn-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true";
+const connectionString = "mongodb+srv://SherzodBek:Werzod%402001@cluster1.oliai.mongodb.net/Reja";
+
 
 
 mongodb.connect(connectionString, {

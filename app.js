@@ -33,8 +33,16 @@ app.set("view engine", "ejs") /// This line tells Express which templating engin
 
 //4 Routing code
 app.post("/create-item", (req, res) => {    // malumotni olib keladi va databasega yozadi
-    console.log(req.body);
-    res.json({test: "success"});
+    console.log("User entered /");
+    const new_reja = req.body.reja;
+    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.end("something went wrong");
+        }else {
+            res.end("successfully added!")
+        }
+    })
 })
 
 // app.get('/author', (req, res) => {          ///This route handles GET requests sent to /author. GET routes are typically used to retrieve and display data.
@@ -42,7 +50,16 @@ app.post("/create-item", (req, res) => {    // malumotni olib keladi va database
 // });
 
 app.get('/', function (req, res) {   /// databasedagi ma'lumotni uqsh uchun get
-    res.render('reja');
+    console.log("User entered /");
+    db.collection("plans").find()
+    .toArray((err, data) => {
+        if (err) {
+            console.log(err)
+            res.end("Something went wrong!");
+        }else {
+            res.render("reja", {items: data });
+        }
+    })
 });
 
 
