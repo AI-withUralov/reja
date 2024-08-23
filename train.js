@@ -1,4 +1,4 @@
-console.log("Jack Ma tog'a maslahatlari!");
+//console.log("Jack Ma tog'a maslahatlari!");
 
 const list = [
     "Yaxshi talaba buling!",  // 0-20
@@ -72,9 +72,9 @@ async function run() {
     javob = await maslahatBering(12);
     console.log(javob);
 }
-run();
+//run();
 
-
+// <<-------- Task A-------->>
 // Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
 // MASALAN countLetter("e", "engineer") 3ni return qiladi.
 
@@ -91,5 +91,16 @@ function Task_A(letter, word) {
 
 
 const javob = Task_A("a", "applaaa");
-console.log("Ushbu harf berilgan so'zda ", javob, " martta qatnashgan")
+//console.log("Ushbu harf berilgan so'zda ", javob, " martta qatnashgan")
 
+
+// <<-------- Task B-------->>
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+function string(a){
+    const digitCount = a.match(/\d/g).length || 0;
+    console.log('Qatnashgan raqamlar soni:', digitCount)
+}
+string("df3g4vf2gr41");
