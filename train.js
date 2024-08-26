@@ -103,4 +103,28 @@ function string(a){
     const digitCount = a.match(/\d/g).length || 0;
     console.log('Qatnashgan raqamlar soni:', digitCount)
 }
-string("df3g4vf2gr41");
+//string("df3g4vf2gr41");
+
+// <<-------- Task C -------->>
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function checker(str1, str2) {
+
+    const normalizeString = str => str
+        .toLowerCase()               // Convert to lowercase
+        .replace(/[^a-z]/g, '')      // Remove non-alphabetic characters
+        .split('')                   // Split into an array of characters
+        .sort()                      // Sort the array
+        .join('');                   // Join back into a string
+
+    const normalizedStr1 = normalizeString(str1);
+    const normalizedStr2 = normalizeString(str2);
+
+    return normalizedStr1 === normalizedStr2;
+}
+
+console.log(checker('MIT15', 'TIM15')); // true
+console.log(checker('Hello', 'World'));   // false
+
+
