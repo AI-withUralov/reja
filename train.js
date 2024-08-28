@@ -124,7 +124,67 @@ function checker(str1, str2) {
     return normalizedStr1 === normalizedStr2;
 }
 
-console.log(checker('MIT15', 'TIM15')); // true
-console.log(checker('Hello', 'World'));   // false
+//console.log(checker('MIT15', 'TIM15')); // true
+//console.log(checker('Hello', 'World'));   // false
+
+// <<-------- Task C -------->>
+// Shunday class tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, 
+// hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
+// Har bir method ishga tushgan vaqt ham log qilinsin.
+// MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 
+// 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return 
+// hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
 
+
+class Shop {
+    constructor(non, lagmon, cola) {
+      this.products = {
+        non: non,
+        lagmon: lagmon,
+        cola: cola
+      };
+    }
+  
+    // Method to get the current date and time formatted
+    getCurrentTime() {
+      const now = new Date();
+      return now.toTimeString().split(' ')[0]; // Returns HH:MM:SS
+    }
+  
+    // Method to show the current stock of products
+    qoldiq() {
+      const currentTime = this.getCurrentTime();
+      console.log(`Hozir ${currentTime}da ${this.products.non}ta non, ${this.products.lagmon}ta lagmon va ${this.products.cola}ta cola mavjud!`);
+    }
+  
+    // Method to sell a product
+    sotish(product, quantity) {
+      const currentTime = this.getCurrentTime();
+      if (this.products[product] !== undefined && this.products[product] >= quantity) {
+        this.products[product] -= quantity;
+        console.log(`Hozir ${currentTime}da ${quantity}ta ${product} sotildi.`);
+      } else {
+        console.log(`Hozir ${currentTime}da yetarli miqdorda ${product} yo'q yoki mavjud emas.`);
+      }
+    }
+  
+    // Method to receive stock of a product
+    qabul(product, quantity) {
+      const currentTime = this.getCurrentTime();
+      if (this.products[product] !== undefined) {
+        this.products[product] += quantity;
+        console.log(`Hozir ${currentTime}da ${quantity}ta ${product} qabul qilindi.`);
+      } else {
+        console.log(`Hozir ${currentTime}da bunday mahsulot mavjud emas.`);
+      }
+    }
+  }
+  
+  // Usage example
+  const shop = new Shop(4, 5, 2);
+  shop.qoldiq(); 
+  shop.sotish('non', 3); 
+  shop.qabul('cola', 4); 
+  shop.qoldiq(); 
+  
