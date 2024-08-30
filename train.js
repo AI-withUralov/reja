@@ -182,9 +182,22 @@ class Shop {
   }
   
   // Usage example
-  const shop = new Shop(4, 5, 2);
-  shop.qoldiq(); 
-  shop.sotish('non', 3); 
-  shop.qabul('cola', 4); 
-  shop.qoldiq(); 
+  // const shop = new Shop(4, 5, 2);
+  // shop.qoldiq(); 
+  // shop.sotish('non', 3); 
+  // shop.qabul('cola', 4); 
+  // shop.qoldiq(); 
   
+
+
+// <<-------- Task E -------->>
+
+  //Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+  //MASALAN: getReverse("hello") return qilsin "olleh"
+  
+function ReverseStr (str) {
+  return str.split('').reverse().join('');
+}
+
+const result = ReverseStr("hello");
+console.log(result)
