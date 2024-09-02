@@ -1,5 +1,7 @@
 //console.log("Jack Ma tog'a maslahatlari!");
 
+const res = require("express/lib/response");
+
 const list = [
     "Yaxshi talaba buling!",  // 0-20
     "To'g'ri boshliq tanlang va hatolardan hulosa chiqaring!", // 20 -30
@@ -199,5 +201,24 @@ function ReverseStr (str) {
   return str.split('').reverse().join('');
 }
 
-const result = ReverseStr("hello");
-console.log(result)
+//const result = ReverseStr("hello");
+//console.log(result)
+
+// <<-------- Task F -------->>
+//Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+//MASALAN: getReverse("hello") return true return qiladi
+
+
+function doubleChar(str) {
+  for (let i = 0; i <= str.length; i++){
+    for(let j = i+1; j <= str.length;  j++){
+      if (str[j] == str[i]) {
+        return false
+      }
+    }
+  }
+  return true;
+}
+
+const result1 = doubleChar("Jasonbek");
+console.log(result1);
